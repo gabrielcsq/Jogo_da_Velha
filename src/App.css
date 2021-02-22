@@ -1,0 +1,149 @@
+:root {
+  --O-color: #2196f3;
+  --X-color: #f44336;
+  --E-color: #777;
+  --green: #4caf50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  font-family: sans-serif;
+  height: 100vh;
+  background: url("https://static3.depositphotos.com/1007531/256/i/600/depositphotos_2561166-stock-photo-loose-leaf-notebook-paper.jpg");
+  background-size: cover;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+  border-color: #777;
+  border: 2px solid;
+  margin-bottom: 2rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 160px);
+
+}
+
+.cell {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00000066;
+
+  cursor: pointer;
+}
+
+
+.board div:first-child{
+  border-right: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid;
+
+}
+
+.board div:nth-child(2){
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+
+.board div:nth-child(3){
+  border-bottom: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+
+.board div:nth-child(4){
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+
+.board div:nth-child(5){
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+
+.board div:nth-child(6){
+  border-bottom: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+
+.board div:nth-child(7){
+  border-right: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+.board div:nth-child(8){
+  border-right: 2px solid;
+  border-color:rgba(0, 0, 0, 0.6);
+
+}
+
+.cell:not(.O):not(.X):hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), o 10px rgba(0, 0, 0, 0.4);
+}
+
+.cell.O,
+.cell.X,
+.game-over .cell {
+  cursor: not-allowed;
+}
+
+.cell.O{
+  color: #2196f3;
+}
+
+.cell.X{
+  color: #f44336;
+}
+
+footer {
+  text-align: center;
+}
+.winner-message {
+  margin: 2rem;
+}
+
+.winner-message span.O {
+  color: var(--O-color);
+}
+
+.winner-message span.X {
+  color: var(--X-color);
+}
+
+.winner-message span.E {
+  color: var(--E-color);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  background-color: var(--green);
+  color: white;
+  font-size: 1.2rem;
+}
